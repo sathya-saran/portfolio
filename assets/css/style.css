@@ -1,0 +1,230 @@
+* {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+:root {
+    --primary: #897DFF;
+    --secondary: #FBBC05;
+    --dark: #111111;
+    --body-bg: #020816;
+}
+
+body {
+    background: var(--body-bg);
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-dark {
+    color: var(--dark) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+#toggle {
+    background: url(../img/toggle.svg);
+    background-color: #274546;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 60px;
+    position: relative;
+    width: 60px;
+    position: fixed;
+    right: 120px;
+    top: 30px;
+    z-index: 9;
+}
+
+#toggle.active {
+    background: url(../img/close.svg);
+    background-color: #efeee5;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.menu {
+    align-items: center;
+    background: #274546;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    padding-top: 100px;
+}
+
+.showcase {
+    position: relative;
+    right: 0;
+    transition: .4s ease-in-out;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--body-bg);
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.dropLight {
+    background: url(../img/drop-light.png) no-repeat;
+}
+
+.headGrid {
+    background: var(--body-bg) url(../img/grid-bg.svg) no-repeat;
+}
+
+.intro h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 64px;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    letter-spacing: -1px;
+    color: #FFF;
+}
+
+.intro h1 span {
+    background: linear-gradient(227deg, #4460FA -85.13%, #907BFF -28.86%, #EC9AB6 22.64%, #FEBC6D 101.12%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.experience {
+    padding-top: 150px;
+    position: relative;
+    border-top: solid 1px;
+    border-image-slice: 1;
+    border-image-source: radial-gradient(circle at top center, rgba(255, 255, 255, 0.2), transparent 50%)!important;
+}
+
+.home-campaign-glowing-icon,
+.home-campaign-glowing-icon-glow {
+    transform: translateZ(0);
+}
+
+.octicon {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+}
+
+.height-full {
+    height: 100% !important;
+}
+
+.build-in-scale-top {
+    transition: transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scaleY(0);
+    transform-origin: 0 0;
+}
+
+.home-campaign-git-line {
+    width: 3px;
+}
+
+.build-in-scale-top {
+    transition: transform .7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scaleY(0);
+    transform-origin: 0 0;
+}
+
+.build-in-scale-top.build-in-animate {
+    transform: scaleY(1);
+}
+
+.tile {
+    background: #040b1d;
+    border: 2px solid #131c33;
+    border-radius: 10px;
+}
+
+.projThumb {
+    transform: scale(0);
+    transition: 0.5s;
+    top: -15px;
+    right: 10px;
+}
+
+.featuredProj a:hover .projThumb {
+    animation: .5s linear spin;
+    transform: scale(1);
+}
+
+@keyframes spin {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.marquee-container {
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.marquee {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+}
+
+.marquee2 {
+    animation-delay: 15s;
+}
+
+.marquee span {
+    filter: grayscale(100%);
+}
+
+.marquee span:hover {
+    filter: grayscale(0);
+}
+
+@keyframes marquee {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%
+    }
+}

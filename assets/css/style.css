@@ -122,7 +122,7 @@ body {
     position: relative;
     border-top: solid 1px;
     border-image-slice: 1;
-    border-image-source: radial-gradient(circle at top center, rgba(255, 255, 255, 0.2), transparent 50%)!important;
+    border-image-source: radial-gradient(circle at top center, rgba(255, 255, 255, 0.2), transparent 50%) !important;
 }
 
 .home-campaign-glowing-icon,
@@ -165,6 +165,37 @@ body {
     background: #040b1d;
     border: 2px solid #131c33;
     border-radius: 10px;
+}
+
+.category-dot-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: 0%;
+}
+
+.category-dot {
+    width: 25px;
+    height: 25px;
+    background-color: #ff521b;
+    border-radius: 40px;
+    transform: scale(0);
+}
+
+.category-info-holder {
+    transition: 0.5s;
+}
+
+.featuredProj a:hover .category-dot {
+    animation: .3s linear spin;
+    transform: scale(1);
+}
+
+.featuredProj a:hover .category-info-holder {
+    padding-left: 50px;
 }
 
 .projThumb {

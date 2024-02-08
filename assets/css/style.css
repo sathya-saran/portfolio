@@ -7,6 +7,7 @@
     --secondary: #FBBC05;
     --dark: #111111;
     --body-bg: #020816;
+    --white: #ffffff;
 }
 
 body {
@@ -76,6 +77,10 @@ body {
     padding-top: 100px;
 }
 
+.menu a {
+    color: var(--white);
+}
+
 .showcase {
     position: relative;
     right: 0;
@@ -108,7 +113,7 @@ body {
 }
 
 .intro h1 span {
-    background: linear-gradient(227deg, #4460FA -85.13%, #907BFF -28.86%, #EC9AB6 22.64%, #FEBC6D 101.12%);
+    background: linear-gradient(227deg, #4460FA -85.13%, #907BFF -28.86%, #EC9AB6 22.64%, #897dff 101.12%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -181,13 +186,22 @@ body {
 .category-dot {
     width: 25px;
     height: 25px;
-    background-color: #ff521b;
+    background-color: var(--primary);
     border-radius: 40px;
     transform: scale(0);
 }
 
 .category-info-holder {
     transition: 0.5s;
+}
+
+.featuredProj a {
+    border-bottom: 1px solid #3b3b3b;
+    transition: 0.5s;
+}
+
+.featuredProj a:hover {
+    border-bottom-color: #FFF;
 }
 
 .featuredProj a:hover .category-dot {
@@ -197,6 +211,7 @@ body {
 
 .featuredProj a:hover .category-info-holder {
     padding-left: 50px;
+    width: 60%;
 }
 
 .projThumb {
@@ -260,6 +275,36 @@ body {
         left: -100%
     }
 }
+
 .text-midwhite {
     color: #aaaaaa;
+}
+
+@media screen and (max-width: 991px) {
+    .intro h1 {
+        font-size: 2.5rem;
+        line-height: 50px;
+    }
+    #toggle {
+        right: 4%;
+    }
+    .projThumb {
+        display: none;
+    }
+    .featuredProj a:hover .category-info-holder {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .intro h1 {
+        font-size: 2rem;
+        line-height: 45px;
+    }
+}
+
+@media screen and (max-height: 560px) {
+    .headGrid .container {
+        justify-content: flex-start !important;
+    }
 }

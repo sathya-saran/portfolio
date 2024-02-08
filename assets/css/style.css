@@ -112,7 +112,8 @@ body {
     color: #FFF;
 }
 
-.intro h1 span {
+.intro h1 span,
+.text-primary-gradient {
     background: linear-gradient(227deg, #4460FA -85.13%, #907BFF -28.86%, #EC9AB6 22.64%, #897dff 101.12%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
